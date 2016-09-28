@@ -1,0 +1,8 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.top>h1, .top>h2 {
+    text-align: center;
+}

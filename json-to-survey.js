@@ -1,15 +1,18 @@
+window.$ = window.jQuery = require("jquery");
+console.log( [$, jQuery] );
+
 var formData = {
     formTitle       : "Pozitif Psikoloji Test Bataryası",
     formDate        : "Ekim 2015",
-    formIntro       : "Değerli Katılımcı, #nl# Çalışmaya katılmak tamamen #b# GÖNÜLLÜLÜK esasına bağlıdır. Çalışmaya \
+    formIntro       : "Değerli Katılımcı, #nl# Çalışmaya katılmak tamamen #b# GÖNÜLLÜLÜK #-b# esasına bağlıdır. Çalışmaya \
     katılmamayı tercih edebilirsiniz veya herhangi bir zamanda, herhangi bir nedenle ya da neden göstermeksizin \
     araştırmadan çekilebilirsiniz. Bu durumlarda herhangi bir olumsuz sonuçta karşılaşmayacaksınız. Çalışma sonucunda \
-    birey bazında herhangi bir değerlendirme yapılmayacak, vermiş olduğunuz bilgiler sadece ve sadece #b# BİLİMSEL #b# AMAÇLA #b# KULLANILACAK \
-    ve üçüncü şahıslarla kesinlikle paylaşılmayacaktır. Araştırmada elde edeceğimiz bilgilerle ilgili #b# GİZLİLİK esastır. \
+    birey bazında herhangi bir değerlendirme yapılmayacak, vermiş olduğunuz bilgiler sadece ve sadece #b# BİLİMSEL AMAÇLA KULLANILACAK #-b# \
+    ve üçüncü şahıslarla kesinlikle paylaşılmayacaktır. Araştırmada elde edeceğimiz bilgilerle ilgili #b# GİZLİLİK #-b# esastır. \
     Araştırmacı, vereceğiniz bilgilerin gizliliğini koruma konusunda sorumluluğu kabul etmektedir. #nl# Ekteki ölçeklerde yaşamınızla ilgili \
     bazı ifadeler bulunmaktadır. Her bir ifadeyi size uygunluk derecesine göre cevap anahtarı üzerinde işaretleyiniz. #nl# \
     Çalışma hakkında her türlü bilgi ve sorularınızı araştırmacıya iletebilirsiniz. #nl# Bilimsel bir çalışmaya vermiş \
-    olduğunuz destekten ve samimi cevaplarınızdan dolayı çok teşekkür ederiz. #nl# #nl# #b# NOT: Bu test bataryası, \
+    olduğunuz destekten ve samimi cevaplarınızdan dolayı çok teşekkür ederiz. #nl# #nl# #b# NOT: #-b# Bu test bataryası, \
     eğitim dönemi sonunda sizin kazanımlarınızı değerlendirmek için de kullanılacaktır. Araştırma sonucu size geri \
     bildirim olarak iletilecektir. İsminizi yazmanız sizin tercihinize bırakılmıştır.",
     formCredentials : [
@@ -203,31 +206,46 @@ var obj = {
   "source"            : "Mumcuoglu, Ö. (2002). Bar-On Duygusal Zeka Testi'nin Türkçe Dilsel Esdegerlik, Güvenirlik ve Geçerlik Çalısması, Yüksek Lisans Tezi, Marmara Üniversitesi Egitim Bilimleri Enstitüsü, İstanbul"
 };
 
+var currentScale = 0;
+
 var createIntroPage = function() {
     var back = document.createElement("div");
     back.className = "outback";
     document.body.appendChild(back);
 
+    var formTitle = document.createElement("h1");
+    formTitle.className = "form-title";
+    formTitle.id = "title";
+    formTitle.textContent = formData.formTitle;
+    formTitle.lang = "tr";
+    back.appendChild(formTitle);
+
+    var formDate = document.createElement("h2");
+    formDate.className = "form-date";
+    formDate.textContent = formData.formDate;
+    formDate.lang = "tr";
+    back.appendChild(formDate);
+
     formIntroText = formData.formIntro;
     formIntroText = formIntroText.split("#nl#").join("</p><p>");
+    formIntroText = formIntroText.split("#b#").join("<b>");
+    formIntroText = formIntroText.split("#-b#").join("</b>");
+    formIntroText = "<p>" + formIntroText + "</p>";
 
-    // TODO: BOLD word recognition tag insertion
-
-    // var boldSplit = formIntroText.split("#b#");
-    // for (var section in boldSplit) {
-    //     var word = section.split(" ")[0];
-    //     console.log(word);
-    //     section.split(" ")[0] = "<b>" + word + "</b>";
-    //     console.log(section.split(" "[0]));
-    // }
-    // formIntroText = boldSplit.join(" ");
-
-    var text = document.createElement("p");
+    var text = document.createElement("div");
+    text.className = "intro-text";
     text.innerHTML = formIntroText;
     back.appendChild(text);
+
+    var proceedButton = document.createElement("input");
+    proceedButton.type = "submit";
+    proceedButton.value = "Devam";
+    proceedButton.addEventListener("click", createCredentialRequestPage, false);
+    back.appendChild(proceedButton);
 }
 
 var createCredentialRequestPage = function() {
+    clearWindow();
     var back = document.createElement("div");
     back.className = "outback";
     document.body.appendChild(back);
@@ -294,13 +312,89 @@ var createCredentialRequestPage = function() {
     var submitButton = document.createElement("input");
     submitButton.type = "submit";
     submitButton.value = "Devam";
-    submitButton.addEventListener("click", clearWindow, false);
+    submitButton.addEventListener("click", createScale, false);
     back.appendChild(submitButton);
+}
+
+var createScale = function() {
+    clearWindow();
+
+    var back = document.createElement("div");
+    back.className = "outback";
+    document.body.appendChild(back);
+
+    var scaleTitle = document.createElement("h2");
+    scaleTitle.className = "scale-title";
+    scaleTitle.textContent = formData.formScales[currentScale].scaleTitle;
+    back.appendChild(scaleTitle);
+
+    var divider = document.createElement("div");
+    divider.className = "divider";
+    back.appendChild (divider);
+
+    var questionList = [];
+
+    for (var i = 0; i < formData.formScales[currentScale].scaleQuestions.length; i++) {
+        questionList[i] = document.createElement("div");
+        questionList[i].className = "question";
+        questionList[i].innerHTML = (i + 1) + ". " + formData.formScales[currentScale].scaleQuestions[i];
+        var responses = document.createElement("div");
+        for (var j = 0; j < formData.formScales[currentScale].scaleResponses.length; j++) {
+            var radioButton = document.createElement("div");
+            var radio = document.createElement("input");
+            radio.type = "radio";
+            radio.id = "respond" + (i+1) + "-" + (j+1);
+            radio.name = "respond" + (i + 1);
+            radio.className = "radio";
+            radio.value = formData.formScales[currentScale].scaleResponses[j].value;
+
+            var label = document.createElement("label");
+            label.htmlFor = radio.id;
+            label.className = "radio-label";
+            label.textContent = formData.formScales[currentScale].scaleResponses[j].text;
+
+            radioButton.appendChild(radio);
+            radioButton.appendChild(label);
+
+            responses.appendChild(radioButton);
+
+            // radioButton.type = "radio";
+            // radioButton.name = "respond" + (i + 1);
+            // radioButton.value = formData.formScales[currentScale].scaleResponses[j].value;
+            // responses.appendChild(radioButton);
+            // responses.innerHTML += formData.formScales[currentScale].scaleResponses[j].text + "<br>";
+        }
+        questionList[i].appendChild(responses);
+        back.appendChild(questionList[i]);
+        var separator = document.createElement("div");
+        separator.className = "divider";
+        back.appendChild(separator);
+    }
+
+    var proceedButton = document.createElement("input");
+    proceedButton.type = "submit";
+    proceedButton.value = "Devam";
+    proceedButton.addEventListener("click", function(){
+        currentScale += 1;
+        createScale();
+        $("html,body").animate({scrollTop: 0}, 0);
+    }, false);
+    back.appendChild(proceedButton);
+
+    $(".question").find("input").parent().find("label").css({cursor: "pointer"});
+        $(".question").find("input").on("click", function() {
+            // $(this).closest(".question").css( {backgroundColor: "#C5DABB", borderRadius: "5px"});
+            // Clear other selected ones
+            $(this).parent().parent().find("div").removeClass("selected");
+            $(this).closest("div").addClass("selected");
+        });
 }
 
 var clearWindow = function() {
     document.body.innerHTML = "";
 };
 
-createIntroPage();
+// createIntroPage();
 // createCredentialRequestPage();
+
+createScale();

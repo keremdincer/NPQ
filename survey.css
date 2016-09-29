@@ -1,3 +1,18 @@
+@font-face {
+    font-family: Phenomena-Regular;
+    src: url("fonts/Phenomena-Regular.otf");
+}
+
+@font-face {
+    font-family: BebasKai-Regular;
+    src: url("fonts/BebasKai-Regular.otf");
+}
+
+@font-face {
+    font-family: CALIBRI;
+    src: url("fonts/CALIBRI.ttf");
+}
+
 body {
     background-color: #93B59A;
 }
@@ -31,4 +46,61 @@ body {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
+}
+
+.outback .form-title[lang=tr]{
+    font-family: BebasKai-Regular;
+    font-size: 60px;
+    color: #0cb2ae;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.outback .form-date[lang=tr]{
+    font-family: BebasKai-Regular;
+    font-size: 38px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+}
+
+.outback .intro-text {
+    font-family: CALIBRI;
+    font-size: 20px;
+}
+
+.outback .divider {
+    border-bottom: 1px solid #ccc;
+    /*margin-bottom: 20px;*/
+}
+
+.scale-title {
+    font-family: CALIBRI;
+    text-align: center;
+}
+
+.question {
+    font-family: CALIBRI;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.question div {
+    margin-top: 7px;
+}
+
+.question-answered {
+    background-color: #C5DABB;
+    border-radius: 5px;
+}
+
+.selected {
+    border: 1px solid #999;
+    border-radius: 3px;
+    background-color: #C5DABB;
 }

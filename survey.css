@@ -95,12 +95,13 @@ body {
 }
 
 .question-answered {
-    background-color: #C5DABB;
+    border: 2px dotted #999;
+    background-color: #ECEFE6;
     border-radius: 5px;
 }
 
 .selected {
-    border: 1px solid #999;
+    padding: 5px;
     border-radius: 3px;
-    background-color: #C5DABB;
+    background-color: #F7C739;
 }

@@ -1,0 +1,193 @@
+{
+    "formTitle"       : "Pozitif Psikoloji Test Bataryası",
+    "formDate"        : "Ekim 2015",
+    "formIntro"       : "<p>Değerli Katılımcı, </p><p> Çalışmaya katılmak tamamen <b> GÖNÜLLÜLÜK </b> esasına bağlıdır. Çalışmaya katılmamayı tercih edebilirsiniz veya herhangi bir zamanda, herhangi bir nedenle ya da neden göstermeksizin araştırmadan çekilebilirsiniz. Bu durumlarda herhangi bir olumsuz sonuçta karşılaşmayacaksınız. Çalışma sonucunda birey bazında herhangi bir değerlendirme yapılmayacak, vermiş olduğunuz bilgiler sadece ve sadece <b> BİLİMSEL AMAÇLA KULLANILACAK </b> ve üçüncü şahıslarla kesinlikle paylaşılmayacaktır. Araştırmada elde edeceğimiz bilgilerle ilgili <b> GİZLİLİK </b> esastır. Araştırmacı, vereceğiniz bilgilerin gizliliğini koruma konusunda sorumluluğu kabul etmektedir. </p><p> Ekteki ölçeklerde yaşamınızla ilgili bazı ifadeler bulunmaktadır. Her bir ifadeyi size uygunluk derecesine göre cevap anahtarı üzerinde işaretleyiniz. </p><p> Çalışma hakkında her türlü bilgi ve sorularınızı araştırmacıya iletebilirsiniz. </p><p> Bilimsel bir çalışmaya vermiş olduğunuz destekten ve samimi cevaplarınızdan dolayı çok teşekkür ederiz. </p><br><p> <b> NOT: </b> Bu test bataryası, eğitim dönemi sonunda sizin kazanımlarınızı değerlendirmek için de kullanılacaktır. Araştırma sonucu size geri bildirim olarak iletilecektir. İsminizi yazmanız sizin tercihinize bırakılmıştır.</p>",
+    "formCredentials" : [
+        {
+        "text": "Ad Soyad",
+        "type": "text"
+        }, {
+        "text": "Cinsiyet",
+        "type": "text"
+        }, {
+        "text": "Yaş",
+        "type": "text"
+        }, {
+        "text": "Bölüm",
+        "type": "text"
+        }, {
+        "text": "Sınıf",
+        "type": "text"
+        }
+    ],
+    "formScales"      : [
+        {
+            "scaleTitle"      : "Doğrusal Zeka Ölçeği",
+            "scaleResponses"  : [
+                {
+                    "text" : "Hiç katılmıyorum",
+                    "value" : 1
+                },
+                {
+                    "text" : "Çoğunlukla katılmıyorum",
+                    "value" : 2
+                },
+                {
+                    "text" : "Biraz katılıyorum",
+                    "value" : 3
+                },
+                {
+                    "text": "Katılıyorum",
+                    "value" : 4
+                },
+                {
+                    "text": "Çoğunlukla katılıyorum",
+                    "value" : 5
+                },
+                {
+                    "text": "Tamamen katılıyorum",
+                    "value": 6
+                }
+            ],
+            "scaleQuestions" : [
+                {"text":"Hayatımı sürdürebilmek için, hem olumlu hem de olumsuz duygularımın farkındayım.", "answerVal":"reversed"},
+                {"text":"Olumsuz duygularım, hayatımda değiştirmem gereken şeyler hakkında bana yardımcı olur.", "answerVal":"reversed"},
+                {"text":"Baskı altında bile sakin kalabilirim.", "answerVal":"normal"},
+                {"text":"Andan ana değişen duygularımı yönlendirebilirim.", "answerVal":"normal"},
+                {"text":"Zor bir durumla karşılaştığımda, hayatın isteklerine odaklanabilir ve sakinliğimi koruyabilirim.", "answerVal":"normal"},
+                {"text":"Zor bir durumla karşılaştığımda, eğlence, mizah, mücadele ruhu gibi olumlu özelliklerimi bir araya getirip kullanabilirim.", "answerVal":"normal"},
+                {"text":"Hissettiğim duyguların sorumluluğunu bilirim.", "answerVal":"normal"},
+                {"text":"Bir şeyler beni üzdükten sonra hemen kendime gelirim.", "answerVal":"normal"},
+                {"text":"Diğer insanların problemlerini dinlemede etkinimdir.", "answerVal":"normal"},
+                {"text":"Olumsuz duyguların etrafında dönüp durmam.", "answerVal":"normal"},
+                {"text":"Diğer insanların duygusal ihtiyaçlarına karşı hassasımdır.", "answerVal":"normal"},
+                {"text":"Diğer insanların üzerinde sakinleştirici bir etkim vardır.", "answerVal":"normal"},
+                {"text":"Aksiliklerle karşılaştığımda tekrar ve tekrar kendimi motive edebilirim.", "answerVal":"normal"},
+                {"text":"Hayatın zorluklarına karşı yaratıcı olmaya çalışırım.", "answerVal":"normal"},
+                {"text":"Diğer insanların motivasyonları, istekleri ve durumlarına uygun cevap verebilirim.", "answerVal":"normal"},
+                {"text":"İhtiyaç olduğunda sakinlik, uyanıklık ve duruma odaklanmayı kolayca sağlayabilirim.", "answerVal":"normal"},
+                {"text":"Zamanı geldiğinde olumsuz duygularımla yüzleşebilirim ve duruma uygun olarak çalışabilirim.", "answerVal":"normal"},
+                {"text":"Üzücü bir olaydan sonra kendimi yatıştırabilirim.", "answerVal":"normal"},
+                {"text":"İyilik halimi sürdürebilmek için doğru duygularımı tanımanın çok önemli olduğunu düşünüyorum.", "answerVal":"normal"},
+                {"text":"İnsanlar duygularını açıkça söylemediklerinde bile, onların duygularını anlayabilirim.", "answerVal":"normal"},
+                {"text":"İnsanların duygularını onların yüz ifadelerinden anlayabilirim.", "answerVal":"normal"},
+                {"text":"Bir görev için çağrıldığımda, olumsuz duygularımı bir yana bırakabilirim.", "answerVal":"normal"},
+                {"text":"İnsanların ihtiyaçlarını gösteren sosyal sinyalleri(işaretleri) hemen fark ederim.", "answerVal":"normal"},
+                {"text":"İnsanlar beni diğer insanların duyguları için etkin bir danışman olarak görürler.", "answerVal":"normal"},
+                {"text":"Kendi duygularının farkında olan insanlar hayatlarını daha iyi idare ederler.", "answerVal":"normal"},
+                {"text":"Sık sık diğerlerinin durumlarını(morallerini) geliştirmeye çalışırım.", "answerVal":"normal"},
+                {"text":"İlişkileri yürütmek için iyi tavsiyelerde bulunabilirim.", "answerVal":"normal"},
+                {"text":"İnsanların duygularına kolayca uyum sağlarım.", "answerVal":"normal"},
+                {"text":"İnsanların motivasyonlarını sağlamada ve amaçlarına ulaşmalarında yardım ederim.", "answerVal":"normal"},
+                {"text":"Olumsuz duygularımdan hemencecik kurtulabilirim.", "answerVal":"normal"}
+            ],
+            "scaleSource" : "Mumcuoglu, Ö. (2002). Bar-On Duygusal Zeka Testi'nin Türkçe Dilsel Esdegerlik, Güvenirlik ve Geçerlik Çalısması, Yüksek Lisans Tezi, Marmara Üniversitesi Egitim Bilimleri Enstitüsü, İstanbul"
+        },
+        {
+            "scaleTitle"  : "Warwick-Edinburgh Mental İyi Oluş Ölçeği",
+            "scaleResponses"  : [
+                {
+                    "text" : "Hiç katılmıyorum",
+                    "value" : 1
+                },
+                {
+                    "text" : "Katılmıyorum",
+                    "value" : 2
+                },
+                {
+                    "text" : "Biraz katılıyorum",
+                    "value" : 3
+                },
+                {
+                    "text": "Katılıyorum",
+                    "value" : 4
+                },
+                {
+                    "text": "Tamamen katılıyorum",
+                    "value": 5
+                }
+            ],
+            "scaleQuestions" : [
+                {"text":"Gelecekle ilgili iyimserim.", "answerVal":"reversed"},
+                {"text":"Kendimi işe yarar(faydalı) hissediyorum.", "answerVal":"normal"},
+                {"text":"Kendimi rahatlamış hissediyorum.", "answerVal":"normal"},
+                {"text":"Diğer insanlara karşı ilgiliyim.", "answerVal":"normal"},
+                {"text":"Farklı işlere zaman ayırabilecek enerjim var.", "answerVal":"normal"},
+                {"text":"Sorunlarla iyi bir şekilde başa çıkabilirim.", "answerVal":"normal"},
+                {"text":"Açık ve net bir biçimde düşünebiliyorum.", "answerVal":"normal"},
+                {"text":"Kendimden memnunum.", "answerVal":"normal"},
+                {"text":"Kendimi diğer insanlara yakın hissediyorum.", "answerVal":"normal"},
+                {"text":"Kendime güveniyorum.", "answerVal":"normal"},
+                {"text":"Kendi kararlarımı kendim verebiliyorum.", "answerVal":"normal"},
+                {"text":"Sevildiğimi hissediyorum.", "answerVal":"normal"},
+                {"text":"Yeni şeylere karşı ilgiliyim.", "answerVal":"normal"},
+                {"text":"Neşeli hissediyorum.", "answerVal":"normal"}
+            ],
+            "calculation":[
+                {"name": "Sum"}
+            ],
+            "scaleSource" : "Kendal, G. (2015). Warwick-Edinburgh Mental İyi Oluş Ölçeği'nin Türkçe Formu: Geçerlilik ve güvenirlik çalışması. The Journal of Happiness & Well-Being, 3(1), 103-115."
+        },
+        {
+            "scaleTitle"  : "Oxford Mutluluk Ölçeği",
+            "scaleResponses"  : [
+                {
+                    "text" : "Hiç katılmıyorum",
+                    "value" : 1
+                },
+                {
+                    "text" : "Çoğunlukla katılmıyorum",
+                    "value" : 2
+                },
+                {
+                    "text" : "Biraz katılıyorum",
+                    "value" : 3
+                },
+                {
+                    "text": "Katılıyorum",
+                    "value" : 4
+                },
+                {
+                    "text": "Çoğunlukla katılıyorum",
+                    "value" : 5
+                },
+                {
+                    "text": "Tamamen katılıyorum",
+                    "value": 6
+                }
+            ],
+            "scaleQuestions" : [
+                {"text":"Kendimden hoşnut değilim.", "answerVal":"normal"},
+                {"text":"Diğer insanlara karşı oldukça ilgiliyim.", "answerVal":"normal"},
+                {"text":"Hayatın oldukça ödüllendirici olduğunu düşünüyorum.", "answerVal":"normal"},
+                {"text":"Neredeyse herkese karşı oldukça sıcak duygular besliyorum.", "answerVal":"normal"},
+                {"text":"Sabahları dinlenmiş olarak uyanırım.", "answerVal":"normal"},
+                {"text":"Geleceğim hakkında pek iyimser değilim.", "answerVal":"normal"},
+                {"text":"Pek çok şeyi eğlenceli buluyorum.", "answerVal":"normal"},
+                {"text":"Yaptığım şeylere karşı ilgili ve kendini adayan birisiyim.", "answerVal":"normal"},
+                {"text":"Hayat güzeldir.", "answerVal":"normal"},
+                {"text":"Dünyanın iyi bir yer olduğunu düşünmüyorum.", "answerVal":"normal"},
+                {"text":"Çok gülen birisiyim.", "answerVal":"normal"},
+                {"text":"Hayatımdaki her şeyden oldukça memnunum.", "answerVal":"normal"},
+                {"text":"Çekici birisi olduğumu düşünmüyorum.", "answerVal":"normal"},
+                {"text":"Yaptıklarımla yapmak istediklerim arasında büyük fark var.", "answerVal":"normal"},
+                {"text":"Çok mutluyum.", "answerVal":"normal"},
+                {"text":"Çevremdeki güzellikleri fark ederim.", "answerVal":"normal"},
+                {"text":"Diğer insanlar üzerinde daima neşeli bir etki bırakırım.", "answerVal":"normal"},
+                {"text":"Yapmak istediğim her şeye zaman bulabilirim.", "answerVal":"normal"},
+                {"text":"Yaşamımın kontrolü elimde değilmiş gibi hissediyorum.", "answerVal":"normal"},
+                {"text":"Kendimi herhangi bir konuda sorumluluk alabilecek güçte hissediyorum.", "answerVal":"normal"},
+                {"text":"Zihinsel olarak kendimi tamamen zinde(dinç) hissediyorum.", "answerVal":"normal"},
+                {"text":"Genellikle neşeli ve sevinçliyim.", "answerVal":"normal"},
+                {"text":"Herhangi bir konuda karar vermekte zorlanırım.", "answerVal":"normal"},
+                {"text":"Yaşamımın belli bir amacı ve anlamı yok.", "answerVal":"normal"},
+                {"text":"Kendimi oldukça enerjik hissediyorum.", "answerVal":"normal"},
+                {"text":"Genellikle olaylar üzerinde olumlu etkim vardır.", "answerVal":"normal"},
+                {"text":"Diğer insanlarla birlikte olmaktan keyif almıyorum.", "answerVal":"normal"},
+                {"text":"Kendimi çok sağlıklı hissetmiyorum.", "answerVal":"normal"},
+                {"text":"Geçmişimle ilgili pek mutlu anılara sahip değilim.", "answerVal":"normal"}
+            ],
+            "scaleSource" : "Doğan, T, T., & Sapmaz, F. (2012). Oxford Mutluluk Ölçeği Türkçe Formunun Psikometrik Özelliklerinin Üniversite Öğrencilerinde İncelenmesi. Düşünen Adam Psikiyatri ve Nörolojik Bilimler Dergisi, 25(4), 297-304."
+        }
+    ]
+}
